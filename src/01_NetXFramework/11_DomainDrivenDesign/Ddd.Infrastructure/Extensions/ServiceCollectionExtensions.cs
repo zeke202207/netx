@@ -15,7 +15,7 @@ public static class ServiceCollectionExtensions
     {
         var database = config.GetSection(TenantConst.C_TENANT_CONFIG_DATABASEINFO).Get<DatabaseInfo>();
         services.AddScoped<IMediator, Mediator>()
-            .AddTransient<ServiceFactory>(sp => sp.GetService)
+            //.AddTransient<ServiceFactory>(sp => sp.GetService)
             .AddScoped<ICommandBus, CommandBus>()
             .AddScoped<IQueryBus, QueryBus>();
         services.TryAddScoped<IEventBus, EventStoreEvent>();

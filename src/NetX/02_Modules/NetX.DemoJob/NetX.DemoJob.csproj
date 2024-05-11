@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>$(TF)</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetDir)NetX.DemoJob.dll $(SolutionDir)NetX\01_WebApi\bin\Debug\net6.0\modules\jobtaskdemo\NetX.DemoJob.dll" />
+    <Exec Command="copy $(TargetDir)NetX.DemoJob.dll $(SolutionDir)NetX\01_WebApi\bin\Debug\net8.0\modules\jobtaskdemo\NetX.DemoJob.dll" />
   </Target>
 
 </Project>

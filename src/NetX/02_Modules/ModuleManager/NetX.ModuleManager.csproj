@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>$(TF)</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetDir)NetX.ModuleManager.dll $(SolutionDir)NetX\01_WebApi\bin\Debug\net6.0\modules\modulemanager\NetX.ModuleManager.dll" />
+    <Exec Command="copy $(TargetDir)NetX.ModuleManager.dll $(SolutionDir)NetX\01_WebApi\bin\Debug\net8.0\modules\modulemanager\NetX.ModuleManager.dll" />
   </Target>
   
   <ItemGroup>
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.CodeDom" Version="7.0.0" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>$(TF)</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -19,7 +19,7 @@
     </None>
   </ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="copy $(TargetDir)NetX.Caching.dll $(SolutionDir)NetX\01_WebApi\bin\Debug\net6.0\modules\caching\NetX.Caching.dll&#xD;&#xA;" />
+		<Exec Command="copy $(TargetDir)NetX.Caching.dll $(SolutionDir)NetX\01_WebApi\bin\Debug\net8.0\modules\caching\NetX.Caching.dll&#xD;&#xA;" />
 	</Target>
 
 </Project>
